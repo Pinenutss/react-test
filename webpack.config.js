@@ -19,5 +19,10 @@ module.exports = {
     output: {
         path: __dirname + '/src/',
         filename: "bundle.js"
+    },
+    devServer: {
+        contentBase: "./src",
+        historyApiFallback: true,
+        inline: true
     }
 };

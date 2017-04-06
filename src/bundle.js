@@ -9463,7 +9463,7 @@ var ReactDOM = __webpack_require__(79);
 ReactDOM.render(React.createElement(
   'h1',
   null,
-  '\u4F60\u597D react! 2'
+  'This is a react!'
 ), document.getElementById('example'));
 
 /***/ }),
