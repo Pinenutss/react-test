@@ -1,5 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import {Input} from 'antd';
+const Search = Input.Search;
+import {Button} from 'antd';
+import {Rate} from 'antd';
+import {DatePicker} from 'antd';
+const {MonthPicker, RangePicker} = DatePicker;
+
 export default class BodyIndex extends React.Component {
     // render() {
     //
@@ -27,13 +35,30 @@ export default class BodyIndex extends React.Component {
     }
 
     render() {
-        setTimeout(()=>{
-          this.setState({age:30})
-        },2000);
+        function onChange(date, dateString) {
+            console.log(date, dateString);
+        }
+        setTimeout(() => {
+            this.setState({age: "一万岁"})
+        }, 2000);
         return (
             <div>
                 <h2>页面的主体</h2>
-                <p>{this.state.user} {this.state.age} {this.props.userid}{this.props.username}</p>
+                <p>{this.state.user} {this.state.age}
+                    {this.props.userid}{this.props.username}</p>
+                <Search placeholder="input search text" style={{
+                    width: 200
+                }} onSearch={value => console.log(value)}/><br/>
+                <Button type="primary">Primary</Button>
+                <Button>Default</Button>
+                <Button type="dashed">Dashed</Button>
+                <Button type="danger">Danger</Button><br/>
+                <Rate allowHalf defaultValue={2.5}/><br/>
+                <DatePicker onChange={onChange}/>
+                <br/>
+                <MonthPicker onChange={onChange} placeholder="Select month"/>
+                <br/>
+                <RangePicker onChange={onChange}/>
             </div>
         )
     }
