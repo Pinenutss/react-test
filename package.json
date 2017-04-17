@@ -2,7 +2,7 @@
   "name": "react.js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "root.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +19,7 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-mixin": "^2.0.2",
+    "react-responsive": "^1.2.7",
     "react-router": "^4.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^2.3.3",
